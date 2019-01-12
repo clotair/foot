@@ -1,4 +1,4 @@
-<section class="tout">
+<section class="tout rpoule">
     <a name="jour1"></a>
     <h1 >Premiere Journee</h1>
 
@@ -57,3 +57,7 @@
         <app-match *ngFor="let match of gp4_j3|async" [idmacht]="match"></app-match>
       </div>
   </section>
+  <style>
+    <?php include('poule.css')?>
+  </style>
+  

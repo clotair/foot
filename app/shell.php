@@ -1,7 +1,7 @@
 
 
 <?php include("elements/header/header.php");?>
-<section>
+<section class="container">
   <div class="competition " hidden>
     <?php include('competition/index.php');?>
   </div>
@@ -9,7 +9,7 @@
     <?php include('resultat/index.php');?>
   </div>
 
-  <div class="classement" hidden>
+  <div class="classementA" hidden>
     <?php include('classement/index.php');?>
   </div>
 </section>
