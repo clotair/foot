@@ -10,7 +10,7 @@
  
   <!--<link rel="manifest" href="manifest.json">-->
   <meta name="theme-color" content="#1976d2">
-  <link rel="stylesheet" src="style.css" type="text/css">
+  <link rel="stylesheet" href="/footapp2/styles.css">
 </head>
 <body>
 <?php include('app/shell.php');?>
