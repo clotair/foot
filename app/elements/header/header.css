@@ -1,4 +1,4 @@
-.tete{
+#apphead{
     
 
     
@@ -11,18 +11,18 @@
     transition: 0.5s background-image height;
     transition-property: opacity background-color;
 }
-.overley{
+#apphead .overley{
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
-  background-image: url('/assets/foot10.jpg');
+  background-image: url('/footapp2/assets/foot18.jpg');
   transition-property: opacity  position transform;
   vertical-align: bottom;
   z-index: 2001;
 
 }
-.menu{
+#apphead .menu{
   position: fixed;
   top: 2px;
   display: flex;
@@ -32,33 +32,33 @@
 }
 
 
-.navbar{
+#apphead .navbar{
     display: inline-block;
     width: 90%;
     margin-left: 5%;
     height: 70px;
 
 }
-.active{
+#apphead .active{
   border-bottom: 2px solid #fff;
 }
-.navbar ul li{
+#apphead .navbar ul li{
     
     display: inline-flex;
     
     height: 30px;
    
 }
-.navbar ul li :hover{
+#apphead .navbar ul li :hover{
     opacity: 0.8;
 }
 
-.logo{
+#apphead .logo{
   display: inline-flex;
   width:9%;
   margin-left: 5px;
 }
-.navbar ul li a{
+#apphead .navbar ul li a{
   padding: 15px;
   text-decoration: none;
   color: #fff;
@@ -72,39 +72,39 @@
   text-transform: uppercase;
 
 }
-.navbar ul li a:hover{
+#apphead .navbar ul li a:hover{
   text-decoration: none;
 }
-.navbar ul li a:active{
+#apphead .navbar ul li a:active{
   text-decoration: none;
 }
-.dec{
+#apphead .dec{
     float: right;
 }
 
-.men{
+#apphead .men{
     position: fixed;
     right: 20px;
     display: none;
     top:3%;
     
 }
-.petite{
+#apphead .petite{
   display: none;
 }
 @media screen and (max-width:480px){
-  .active{
+  #apphead .active{
     border-bottom:none;
     opacity: 0.8;
   }
-    .navbar{
+  #apphead  .navbar{
       display: block;
       width: 100%;
       margin-left: 0;
       height: 198px;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 4%, rgba(0, 0, 0, 0) 100%);
     }
-    .navbar ul li a{
+    #apphead  .navbar ul li a{
       padding: 5px;
       text-decoration: none;
 
@@ -113,26 +113,26 @@
       height: 100%;
       margin: auto;
     }
-    .menu{
+    #apphead  .menu{
       display: block;
       width: 100%;
     }
-    .nav-menu{
+    #apphead .nav-menu{
       display: block;
       width: 100%;
       padding-inline-start: 0px;
     }
-    .navbar ul li{
+    #apphead .navbar ul li{
        height: 45px;
        display: block;
     }
-    .navbar{
+    #apphead .navbar{
       display: none;
     }
-    a{
+    #apphead a{
       text-decoration: none;
     }
-    .petite{
+    #apphead .petite{
       display: block;
       margin-top: 8px;
     }
@@ -144,90 +144,18 @@
       text-align: center;
       padding: 15px;
     }
-    .men{
+    #apphead .men{
    
     display: block;
 }
     
-    .tete{
+#apphead .tete{
     height: 280px;
     
     }
-    .dec{
+    #apphead  .dec{
         float: none;
     }
 }
 
 
-/*
-* {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
-.mySlides {display:none;
-}
-
-// Slideshow container 
-.slideshow-container {
-  width: 100%;
-  position: relative;
-  margin: auto;
-  
-}
-
-// Caption text 
-.text {
-  color: #f2f2f2;
-  font-size: 30px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-// Number text (1/3 etc) 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-// The dots/bullets/indicators 
-.dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-// Fading animation 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size 
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-*/
