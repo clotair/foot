@@ -1,0 +1,32 @@
+
+<div *ngFor="let equip of result|async"  class="formul">
+
+     
+          <form     class="form" >
+              <div class="box1"><div class="nomequipe1">{{equip?.equipe1?.nom}}</div>
+              <div class="logo1">
+                  <img class="jolieimage" *ngIf="equip?.equipe1?.banniere" src="/images/{{equip?.equipe1?.banniere}}" />
+              </div></div>
+              <div>
+                  <input type="number" class="scoreinput"  name="score1" placeholder="score" [(ngModel)]="this.macth.equipes[0].but" [value]="equip?.but1" min="0">
+              </div>
+              <div class="vs">VS</div>
+              <div>
+                <input type="number" class="scoreinput"  name="score2" placeholder="score" [(ngModel)]="this.macth.equipes[1].but" [value]="equip?.but2" min="0">
+              </div>
+              
+              <div class="box2"><div class="nomequipe2">{{equip?.equipe2?.nom}}</div><div class="logo2">
+                <img class="jolieimage" *ngIf="equip?.equipe2?.banniere" src="/images/{{equip?.equipe2?.banniere}}" />
+              </div></div>
+             
+          </form>
+     
+
+          <div class="buttonCo">
+            <button type="submit" id="send" class="buttonCe" value="Save" (click)="save()">Save</button>
+        </div>    
+       
+           
+     
+    
+  </div>

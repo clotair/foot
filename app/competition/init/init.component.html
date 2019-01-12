@@ -1,0 +1,46 @@
+<div class="formulaire">
+        <h1>
+            Competition
+        </h1>
+        <form     class="form" (submit)="send_init_info()">
+            <div class="formgroup">
+                <div class="jolielabel">
+                    <label for="name">NOM:</label>
+                </div>
+                <div class="jolieinput">
+                      <input type="text" id="name" [(ngModel)]="info_comp.nom"  name="nom" required/>  
+                </div>
+            
+            </div>
+            <div class="formgroup">
+                <div class="jolielabel">
+                  
+                    <label for="rules">Rules:</label>
+
+                </div>
+                <div class="jolieinput">
+                    <input type="text" id="rules" [(ngModel)]="info_comp.reglement"  name="reglement" >
+                </div>
+            
+            </div>
+            <div class="formgroup">
+                <div class="jolielabel">
+                    <label for="sit">Situation:</label>
+                </div>
+                <div class="jolieinput">
+                     <input type="text" id="sit" [(ngModel)]="info_comp.situation" name="situation" >
+                </div>
+            
+            </div>
+            
+             <div class="buttonCo">
+                    <button type="submit" class="buttonCe">Enregistrer</button>
+             </div>
+           
+            
+        </form> 
+         
+</div>
+        
+
+    

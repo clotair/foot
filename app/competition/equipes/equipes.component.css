@@ -1,0 +1,84 @@
+.formulaire{
+    width: 80%;
+    padding: 20px;
+    margin-top: 15px;
+}
+.form{
+ display: block;
+ margin-top: 30px;
+}
+
+.equipe{
+    display: flex;
+ 
+}
+.basique{
+    display: inline-block;
+    width: 60%;
+    padding-left: 20px;
+}
+.photo{
+    display: inline-block;
+    width: 40%;
+}
+#prev{
+    display: block;
+    width: 90%;
+    height:200px;
+    background-color: rgb(250,242,242);
+    border-radius: 4px;
+}
+img{
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+#file{
+    display: inline-block;
+    position: fixed;
+    top: -31px;
+    opacity: 0;
+}
+.buttonCo {
+    margin-top: 12px;
+
+}
+.joueurInfos{
+    display: flex;
+    padding-top: 40px;
+}
+.joueur{
+    display: inline-block;
+    width: 60%;
+    vertical-align: top
+}
+.rest{
+    display: inline-block;
+    width: 40%;
+    vertical-align: top
+}
+.prin{
+    margin-top: 20px;
+}
+
+@media (max-width:480px){
+    .basique{
+        display: block;
+        width: 100%;
+
+    }
+    .photo{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .equipe{
+        display: block;
+      
+    }
+    .joueurInfos{
+        display: block;
+    }
+    .equipe{
+        display: block;
+    }
+}

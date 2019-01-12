@@ -1,0 +1,62 @@
+
+.form{
+    -webkit-display:flex;
+     display: flex;
+     margin-top: 5px;
+     width: 100%;
+     height: 140px;
+}
+.box1{
+    display: inline-block;
+    width: 90%;
+}
+.box2{
+    display: inline-block;
+    width: 90%;
+    margin-left: 5px;
+}
+.nomequipe1{
+    height: 30px;
+   
+}
+.logo1{
+    background-color: #fff;
+    border-radius: 4px;
+}
+.jolieimage{
+    height: 100px;
+}
+.nomequipe2{
+    height: 30px;
+ 
+}
+.logo2{
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+a{
+    color: initial;
+}
+
+
+.score{
+    display: inline-block;
+    border: none;
+    width: 10%;
+    margin-top: 34%;
+    font-size: 200%;
+    text-align: center;
+
+}
+h3{
+    font-size: 0.8em;
+}
+.vs{
+    margin-top: 58px;
+}
+@media (max-width:480px){
+    .score{
+        margin-top: 28%;
+    }
+}

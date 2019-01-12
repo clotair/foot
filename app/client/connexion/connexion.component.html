@@ -1,0 +1,39 @@
+<div class="topajuste">
+    <div >
+        <h1>ADMIN</h1>
+    </div>
+    <form action=""     class="form" (submit)='connect()'>
+            
+              <div class="formgroup">
+                <div class="jolielabel">
+                   <label for="name">NAME</label>
+                </div>
+                <div class="jolieinput">
+                      <input type="text" id="name" [(ngModel)]="user.nom" name="name" required>
+                </div>
+            
+            </div>
+            <div class="formgroup">
+                <div class="jolielabel">
+                   <label for="password">PASSWORD</label>
+                </div>
+                <div class="jolieinput">
+                     <input type="password" id="password" [(ngModel)]="user.password" name="password">
+                </div>
+            
+            </div>
+            <div class="buttonCo">
+                        <button type="submit" class="buttonCe" >Connceter</button>
+            </div>
+            
+    </form> 
+    <div id="text1">
+           If you don't yet have a competion, sign in , on inscription below<br>
+            <a routerLink="/inscription" style="color:blue">inscription</a></div>
+    </div>
+        
+    
+
+  
+
+
