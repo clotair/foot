@@ -4,4 +4,7 @@
       <app-match  [idmacht]="match.matchs[0]"></app-match>
     </article>
     
-  </section>
+</section>
+<style type="text/css">
+  <?php include('finale.css')?>
+</style>

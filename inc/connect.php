@@ -5,7 +5,7 @@ $dbname = 'comp';
 $user = 'root';
 $pass = '';
 
-$adminuser = 'admin';
-$adminpass = 'admin';
+$adminuser = 'root';
+$adminpass = '';
 
 ?>

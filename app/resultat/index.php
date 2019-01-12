@@ -1,9 +1,11 @@
 <section class="topajuste">
   <nav class="menuContainer">
-      <app-menu class="menu1"></app-menu>
+        <div class="menu1">
+            <?php include('menu/menu.php')?>
+        </div>
   </nav>
  
 <div class="content" >
-  <?php include('match/match.php')?>
+  <?php include('poule/poule.php')?>
 </div>
 </section> 

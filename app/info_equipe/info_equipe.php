@@ -47,3 +47,6 @@
     </main>
     <footer></footer>
 </article>
+<style type="text/css">
+  <?php include('info_equipe.css')?>
+</style>

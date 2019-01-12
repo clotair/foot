@@ -6,3 +6,6 @@
   </article>
   
 </section>
+<style type="text/css">
+  <?php include('demi.css')?>
+</style>

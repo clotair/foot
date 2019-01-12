@@ -8,3 +8,6 @@
     <li class="button"><a routerLink='./finale'><span>FINALE</span></a></li>
   </ul>
 </nav>
+<style type="text/css">
+  <?php include('menu.css')?>
+</style>

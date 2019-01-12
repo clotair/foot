@@ -1,0 +1,7 @@
+<section class="topajuste">
+
+   
+  <div >
+    <router-outlet ></router-outlet>
+  </div>
+</section>  
