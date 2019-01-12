@@ -9,3 +9,6 @@
   </div>
 <div class="foot3">COMP MANAGER copyright &copy; 2018 </div>
 </div>
+<style type="text/css">
+        <?php include('footer.css');?>
+</style>

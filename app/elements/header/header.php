@@ -9,10 +9,10 @@
 
          <div class="navbar">
              <ul class="nav-menu">
-              <li ><a routerLink="/competition" id="manage" *ngIf="connecter">Manage</a></li>
-              <li ><a routerLink="/resultat" id="match" class="active">Match</a></li>
-              <li ><a routerLink="/classement" id="classement">Classement</a></li>
-              <li class="dec"><a routerLink="/connexion" id="admin">Admin</a></li>
+              <li ><a href="/competition" id="manage" *ngIf="connecter">Manage</a></li>
+              <li ><a href="/resultat" id="match" class="active">Match</a></li>
+              <li ><a href="/classement" id="classement">Classement</a></li>
+              <li class="dec"><a href="/connexion" id="admin">Admin</a></li>
                  
              </ul>
         
@@ -24,5 +24,8 @@
   
         </div>
     </header>
-   
+    <style type="text/css">
+        <?php include('header.css');?>
+    </style>
+    
   

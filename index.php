@@ -10,15 +10,10 @@
  
   <!--<link rel="manifest" href="manifest.json">-->
   <meta name="theme-color" content="#1976d2">
- 
+  <link rel="stylesheet" src="style.css" type="text/css">
 </head>
 <body>
  
-<?php
-echo "J'habite en Chine."; // Cette ligne indique où j'habite
-
-// La ligne suivante indique mon âge
-echo "J'ai 92 ans.";
-?>
+<?php include('app/shell.php')?>
 </body>
 </html>

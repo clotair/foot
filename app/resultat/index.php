@@ -4,9 +4,6 @@
   </nav>
  
 <div class="content" >
-  <router-outlet ></router-outlet>
+  <?php include('match/match.php')?>
 </div>
-</section>  
-
-
-
+</section> 
