@@ -13,9 +13,10 @@
   <link rel="stylesheet" src="style.css" type="text/css">
 </head>
 <body>
+<?php include('app/shell.php');?>
 <script type="text/javascript" src="/footapp2/assets/jquery-3.3.1.min.js">
 </script>
-<?php include('app/shell.php');?>
+
 <script type="text/javascript" src="/footapp2/app/elements/header/header.js">
 </script>
 <script type="text/javascript" src="/footapp2/main.js">

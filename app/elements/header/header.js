@@ -25,11 +25,7 @@ $(document).ready(()=>{
       }
     })
     setInterval(()=>{
-     $('#content .navbar ul li').on('click',(e)=>{
-      e.preventDefault();
-      $(".active").removeClass('active');
-      $(e.target).addClass('active');
-     })
+
      $('#content').css({
         'background-image':`url(/footapp2/assets/${mesimage[i%4]})`
       })

@@ -5,6 +5,6 @@
         </div>
     </nav>
     <div class="content">
-        
+    <?php include('new_comp/new_comp.php')?>
     </div>
 </section> 

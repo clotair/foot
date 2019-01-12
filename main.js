@@ -1,0 +1,24 @@
+$(document).ready(function(){
+    $('#manage').click(function(e){
+        $(".active").removeClass('active');
+        $(e.target).addClass('active');
+        e.preventDefault();
+        
+        $('div.pageN').hide();
+        $('div.competition').addClass('pageN').fadeIn(2);
+    })
+    $('#classement').click(function(e){
+        $(".active").removeClass('active');
+        $(e.target).addClass('active');
+        e.preventDefault();
+        $('div.pageN').hide();
+        $('div.classement').addClass('pageN').fadeIn(2);
+    })
+    $('#match').click(function(e){
+        $(".active").removeClass('active');
+        $(e.target).addClass('active');
+        e.preventDefault();
+        $('div.pageN').hide();
+        $('div.resultat').addClass('pageN').fadeIn(2);
+    })
+})
