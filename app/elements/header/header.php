@@ -1,29 +1,30 @@
 
     <header class="tete" id="apphead">
 
-      <div class="menu">
-        <div class="petite">
-                <div id="logo"><a href="/footapp2">ACTUFOOT</a></div>
-                <img class="men" id="menu" src="/footapp2/assets/menu.png" width="40" height="40">
-        </div>
+<div class="menu">
+  <div class="petite">
+          <div id="logo"><a href="/">ACTUFOOT</a></div>
+          <img class="men" id="menu" src="/footapp2/assets/menu.png" width="40" height="40">
+  </div>
 
-         <div class="navbar">
-             <ul class="nav-menu">
-              <li ><a href="#competition" id="manage" >Manage</a></li><!--afficher si user connecter-->
-              <li ><a href="#resultat" id="match" class="active">Match</a></li>
-              <li ><a href="#classement" id="classement">Classement</a></li>
-              <li class="dec"><a href="#connexion" id="admin">Admin</a></li>
-                 
-             </ul>
-        
-          </div>
-          
-      </div>
-        
-      <div class="overley" class="content">
+   <div class="navbar">
+       <ul class="nav-menu">
+        <li ><a href="#" id="manage" *ngIf="connecter">Manage</a></li>
+        <li ><a href="#" id="match" class="active">Match</a></li>
+        <li ><a href="#" id="classement">Classement</a></li>
+        <li class="dec"><a href="#" id="admin">Admin</a></li>
+           
+       </ul>
   
-        </div>
-    </header>
+    </div>
+    
+</div>
+  
+<div class="overley" id="content">
+
+  </div>
+</header>
+
     <style type="text/css">
         <?php include('header.css');?>
     </style>
