@@ -11,6 +11,8 @@ function createThumbnail(file) {
     reader.readAsDataURL(file);
    
 }
+var offline = false;
+var pile = [];
 window.addEventListener("online",(e)=>{
     if(pile!=[]){
        
@@ -160,6 +162,24 @@ $(document).ready(function(){
                             window.location.pathname='footapp2'
                         }
                     }
+            },
+            error:(err)=>{
+                    gestion_err_reseau(()=>{
+                        $.post({
+                            url:'/footapp2/controllers/connexion.php',
+                            data:$(this).serialize(),
+                            success:(data)=>{
+                                    if(data['status']){
+                                        if(data['message']){
+                                            window.location.pathname='footapp2'
+                                        }
+                                    }
+                            },
+                            error:(err)=>{
+                                    gestion_err_reseau(()=>{})
+                            }
+                        })
+                    })
             }
         })
     })
