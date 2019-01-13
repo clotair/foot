@@ -203,7 +203,7 @@ $(document).ready(function(){
         var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'],
             fileInput = document.querySelector('#file'),
             prev = document.querySelector('#prev');
-        if(fileInput.length != 0 ){
+        if(fileInput ){
             fileInput.addEventListener('change', function() {
     
                 var files = this.files,
