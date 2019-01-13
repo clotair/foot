@@ -17,8 +17,12 @@
         
         <li ><a href="" id="match" class="active">Match</a></li>
         <li ><a href="" id="classement">Classement</a></li>
-        <li class="dec"><a href="" id="admin">Admin</a></li>
-           
+        <?php if(!isset($_SESSION['connecter'])){
+            echo "<li class='dec'><a href='' id='admin'>Admin</a></li>";
+        }else{
+            echo "<li class='dec'><a href='/footapp2/controllers/deconnexion.php' >Deconnexion</a></li>";
+        }
+        ?>          
        </ul>
   
     </div>

@@ -159,7 +159,7 @@ $(document).ready(function(){
             success:(data)=>{
                     if(data['status']){
                         if(data['message']){
-                            window.location.pathname='footapp2'
+                            window.location.pathname='footapp2/'
                         }
                     }
             },

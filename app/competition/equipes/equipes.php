@@ -1,7 +1,7 @@
 <div class="formulaire equipes">
     <div class="message"></div>
     <h1>Equipe</h1>
-<form     class="form"  method="post" action="footapp2/addteam.php" id="monform" (submit)=" sendep(fil)" >
+<form     class="form"  (submit)=" sendep(fil)" >
 <div class="equipe">
     <div class="basique">
         <div class="formgroup">
@@ -9,7 +9,7 @@
                     <label for="name">NOM</label>
                 </div>
                 <div class="jolieinput">
-                    <input type="text"  [(ngModel)]="equipe.nom"  name="nom" required>
+                    <input type="text"    name="nom" required>
                 </div>
                 
         </div>
@@ -18,7 +18,7 @@
                     <label for="Represente">Represente:</label>
                 </div>
                 <div class="jolieinput">
-                    <input type="text" id="Represente" [(ngModel)]="equipe.represente" name="represente" >
+                    <input type="text" id="Represente"  name="represente" >
                 </div>
         </div>
   
@@ -41,14 +41,14 @@
         <div class="buttonCo">
             <button class="buttonCe" type="button" id="buttonph">photo</button>
         </div>
-          <input type="file" id="file"  name="equipe"  [(ngModel)]='photo' />
+          <input type="file" id="file"  name="equipe_photo"  />
  
     </div>
 </div>
   
     <div class="joueurInfos">
         <div class="joueur">
-                <app-joueur [_id]="_id" [equipe]="equipe.nom" (nom)="neww($event)"></app-joueur>
+                <app-joueur  (nom)="neww($event)"></app-joueur>
         </div>
         <div class="rest"> 
                 <h3>Liste joueurs</h3>

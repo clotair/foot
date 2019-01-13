@@ -24,5 +24,8 @@
             'status' => $code < 302, // success or not?
             'message' => $message
             ));
+    };
+    function go_to_manage(){
+        echo "<script src='footapp2/controllers/navigation.php?manage=true'></script>";
     }
 ?>

@@ -1,14 +1,3 @@
-var mongoose = require('mongoose'),
-Tournois = mongoose.model('Tournois');
-Arbitre = mongoose.model('Arbitre');
-Terrain = mongoose.model('Terrain');
-Joueur = mongoose.model('Joueur');
-Calendrier = mongoose.model('Calendrier');
-Match = mongoose.model('Match');
-StatMatch = mongoose.model('StatMatch');
-Programme = mongoose.model('Programme');
-Poule = mongoose.model('Poule');
-Equipe = mongoose.model('Equipe');
 
 var EventEmitter = require('events').EventEmitter;
 
@@ -141,9 +130,15 @@ creerpoule=function(nom,valeur,equipes,id,event){
     }
 
 }
-creermatch = function(equipes, id,event){
+ function creermatch (equipes, id){
     
-    if(equipes.length == 2){
+    if($equipes->$length == 2){
+        $req= $pdo->prepare('SELECT * FROM equipes WHERE id=?');
+        $req->execute($equipes[0]);
+        $equipe1 = $req->fetch()
+        $req->execute($equipes[1]);
+        $equipe2 = $req->fetch();
+        $req= $pdo->prepare('INSERT IN TO');
        return Equipe.findOne({_id:equipes[0]},(err,eqp)=>{
             if(err){
                 console.log(err)
