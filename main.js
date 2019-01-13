@@ -115,12 +115,15 @@ $(document).ready(function(){
     });
     $("#formc").on('submit',function(e){
         e.preventDefault()
-        alert('sasa')
         $.post({
             url:'/footapp2/controllers/connexion.php',
             data:$(this).serialize(),
             success:(data)=>{
-                alert(data)
+                    if(data['status']){
+                        if(data['message']){
+                            document.cookie
+                        }
+                    }
             }
         })
     })
