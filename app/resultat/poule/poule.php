@@ -1,4 +1,4 @@
-<section class="tout rpoule">
+<section class="tout rpoule present">
     <a name="jour1"></a>
     <h1 >Premiere Journee</h1>
 

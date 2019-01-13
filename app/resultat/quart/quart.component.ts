@@ -1,12 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CreateCompService } from 'src/app/competition/create-comp.service';
-import { Subject } from 'rxjs';
 
-@Component({
-  selector: 'app-quart',
-  templateUrl: './quart.component.html',
-  styleUrls: ['./quart.component.css']
-})
 export class QuartComponent implements OnInit {
   id
   matchs:Subject<any[]> = new Subject();

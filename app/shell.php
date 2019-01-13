@@ -12,5 +12,7 @@
   <div class="classementA" hidden>
     <?php include('classement/index.php');?>
   </div>
+  <div class="admin" hidden>
+    <?php include('connexion/connexion.php');?>
+  </div>
 </section>
-<?php include("elements/footer/footer.php");?>

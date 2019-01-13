@@ -1,14 +1,6 @@
 
 export class PouleComponent implements OnInit {
-  poule1:Subject<any[]>=new Subject();
-  poule2:Subject<any[]>=new Subject();
-  poule3:Subject<any[]>=new Subject();
-  id;
-  constructor(
 
-    private comp:CreateCompService,
-    private compt : CompteService
-  ) { }
 
   ngOnInit() {
     this.comp.poule1.subscribe((e)=>{

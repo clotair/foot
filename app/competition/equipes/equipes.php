@@ -9,7 +9,7 @@
                     <label for="name">NOM</label>
                 </div>
                 <div class="jolieinput">
-                    <input type="text" id="name" [(ngModel)]="equipe.nom"  name="nom" required>
+                    <input type="text"  [(ngModel)]="equipe.nom"  name="nom" required>
                 </div>
                 
         </div>
