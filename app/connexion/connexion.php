@@ -7,7 +7,7 @@
             
               <div class="formgroup">
                 <div class="jolielabel">
-                   <label for="name">NAME</label>
+                   <label for="nom">NAME</label>
                 </div>
                 <div class="jolieinput">
                       <input type="text"   name="nom" required>
