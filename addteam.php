@@ -19,5 +19,5 @@ $query="INSERT INTO equipe (nom,logo,groupe) VALUES('$nom','$logo','$poule[$m]')
 
 
 insertequipe($pdo);
-    header('Location: index.php');
+    header('Location: app\competition\equipes\equipes.php');
 ?>

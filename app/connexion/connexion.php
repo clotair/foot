@@ -24,7 +24,7 @@
             
             </div>
             <div class="buttonCo">
-                        <button type="submit" class="buttonCe" >Connceter</button>
+                        <button type="submit" class="buttonCe" >Connecter</button>
             </div>
             
     </form> 
