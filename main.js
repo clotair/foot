@@ -49,7 +49,17 @@ var gestion_err_reseau =(fonction,...argument)=>{
 function save_token(name,value){
     document.cookie = `${name}=${value};path=/`;
 }
+function get_match(){
+    $.get({
+        url:'/footapp2/controllers/match.php',
+        success:(data)=>{
+            alert(JSON.stringify(data))
+        }
+    })
+
+}
 $(document).ready(function(){
+    get_match()
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){
