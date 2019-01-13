@@ -1,0 +1,55 @@
+
+.connexion .toptop{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    width: 55%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+.connexion .form{
+
+    padding-inline-start: 14%;
+   
+}
+
+
+.connexion #text1{
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+.connexion h1{
+    padding-top: 0.2em;
+    margin-bottom: 1.5em;
+}
+.connexion .formgroup{
+    line-height: 4.3em;
+}
+
+@media(max-width:480px){
+    .connexion .topajuste{
+        width: 90%;
+    }
+    .connexion .jolielabel{
+        display: block;
+        width: 65%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .connexion .jolieinput{
+        display: block;
+        width: 65%;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .connexion .jolieinput input{
+        width: 100%;
+    
+    }
+}

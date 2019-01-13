@@ -1,0 +1,16 @@
+.phase_poule #quart{
+    margin-top: 20px;
+
+    background-color: #6aa7ed;
+}
+.phase_poule h3{
+    color: #fc9e21;
+    text-shadow: -5px 4px 4px;
+
+    margin-top: 20px;
+}
+@media screen and (max-width:480px){
+    .phase_poule .tout{
+        margin-top: 300px;
+    }
+}

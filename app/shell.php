@@ -3,7 +3,10 @@
 <?php include("elements/header/header.php");?>
 <section class="container">
   <div class="competition " hidden>
-    <?php include('competition/index.php');?>
+    <?php 
+      if(!empty( $_SESSION['connecter']))
+      include('competition/competition.php');
+      ?>
   </div>
   <div class="resultat pageN" >
     <?php include('resultat/index.php');?>

@@ -1,3 +1,16 @@
+function createThumbnail(file) {
+    
+    var reader = new FileReader();
+    
+    reader.addEventListener('load', function() {
+       
+        $('#prev img').attr('src',this.result+'');
+        
+    });
+
+    reader.readAsDataURL(file);
+   
+}
 $(document).ready(function(){
     $('#manage').click(function(e){
         e.preventDefault();
@@ -100,7 +113,18 @@ $(document).ready(function(){
         }
         
     });
-    
+    $("#formc").on('submit',function(e){
+        e.preventDefault()
+        alert('sasa')
+        $.post({
+            url:'/footapp2/controllers/connexion.php',
+            data:$(this).serialize(),
+            success:(data)=>{
+                alert(data)
+            }
+        })
+    })
+
     let Width1 = $(document).outerWidth();
     if(Width1 <=480){
       $('.menu1').css({
@@ -166,11 +190,37 @@ $(document).ready(function(){
        
       }
     })
+    $('#buttonph').click((e)=>{
+        e.preventDefault();
+        $('#file').trigger('click');
     
+      });
  
+    (()=> {
 
+        
+    
+        var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'],
+            fileInput = document.querySelector('#file'),
+            prev = document.querySelector('#prev');
+        if(fileInput.length != 0 ){
+            fileInput.addEventListener('change', function() {
+    
+                var files = this.files,
+                    filesLen = files.length,
+                    imgType;
+                    this.photo = files[0]
+                    createThumbnail(files[0]);
+                
+            });
+        }
+        
+    
+    })();
+  
+    
+    
 })
-
 
 
 
