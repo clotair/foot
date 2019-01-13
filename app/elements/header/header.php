@@ -10,18 +10,25 @@
    <div class="navbar">
        <ul class="nav-menu">
        <?php if(!empty( $_SESSION['connecter'])){
+           if(isset($_GET['manage']))
+           echo '<li ><a href="" id="manage" class="active">Manage</a></li>';
+           else
            echo '<li ><a href="" id="manage" >Manage</a></li>';
-       }
+        }
         
         ?>
+        <?php
+            if(!$_GET)
+            echo '<li ><a href="" id="match" class="active">Match</a></li>';
+            else
+            echo '<li ><a href="" id="match" >Match</a></li>';
+        ?>
         
-        <li ><a href="" id="match" class="active">Match</a></li>
         <li ><a href="" id="classement">Classement</a></li>
-        <?php if(!isset($_SESSION['connecter'])){
+        <?php if(empty($_SESSION['connecter']))
             echo "<li class='dec'><a href='' id='admin'>Admin</a></li>";
-        }else{
+            else
             echo "<li class='dec'><a href='/footapp2/controllers/deconnexion.php' >Deconnexion</a></li>";
-        }
         ?>          
        </ul>
   
