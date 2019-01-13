@@ -1,5 +1,5 @@
 
-<section class="tout" >
+<section class="tout phase_poule" >
 
     <a name="jour1"></a>
   <h1 >Premiere Journee</h1>
@@ -68,3 +68,6 @@
     </div>
     
 </section>
+<style>
+  <?php include('phase_poule.css')?>
+</style>

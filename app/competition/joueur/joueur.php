@@ -1,7 +1,7 @@
 
   <div >
     <h3>Joueur</h3>
-    <form class="form" (submit)="add()">
+    <form class="form" style="padding-left: 20px;" (submit)="add()">
         <div class="formgroup">
             <div class="jolielabel">
               <label for="name">NOM</label>

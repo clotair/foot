@@ -1,20 +1,20 @@
-.formulaire{
+.init .formulaire{
     width: 80%;
     padding: 20px;
     margin-top: 15px;
 }
-.form{
+.init .form{
  display: block;
  margin-top: 30px;
  padding-left: 45px;
 }
 
-#text{
+.init #text{
     font-size: 25px;
     margin-top: 20px;
     text-align: center;
 }
-#text1{
+.init #text1{
     font-size: 25px;
     margin-top: 20px;
     text-align: center;

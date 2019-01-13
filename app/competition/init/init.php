@@ -1,4 +1,4 @@
-<div class="formulaire">
+<div class="formulaire init">
         <h1>
             Competition
         </h1>
@@ -42,5 +42,6 @@
          
 </div>
         
-
-    
+<style type="text/javascript">
+    <?php include('init.css');?>
+</style>

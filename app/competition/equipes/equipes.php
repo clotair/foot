@@ -1,4 +1,4 @@
-<div class="formulaire">
+<div class="formulaire equipes">
     <div class="message"></div>
     <h1>Equipe</h1>
 <form     class="form" id="monform" (submit)=" sendep(fil)" >
@@ -63,5 +63,7 @@
         </div>
     </form>
 </div>
-
+<style type="text/css">
+    <?php include('equipes.css')?>
+</style>
 

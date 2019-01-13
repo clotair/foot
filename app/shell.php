@@ -2,13 +2,14 @@
 
 <?php include("elements/header/header.php");?>
 <section>
-  <div class="resultat pageN">
-    <?php include('resultat/index.php');?>
-  </div>
-  <div class="competition pageN">
+  <div class="competition " hidden>
     <?php include('competition/index.php');?>
   </div>
-  <div class="classement pageN">
+  <div class="resultat pageN" >
+    <?php include('resultat/index.php');?>
+  </div>
+
+  <div class="classement" hidden>
     <?php include('classement/index.php');?>
   </div>
 </section>
