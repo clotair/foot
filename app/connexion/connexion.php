@@ -1,15 +1,16 @@
-<div class="topajuste">
+<div class="connexion topajuste">
+    <div class="toptop">
     <div >
         <h1>ADMIN</h1>
     </div>
-    <form action=""     class="form" (submit)='connect()'>
+    <form id="formc"  class="form" >
             
               <div class="formgroup">
                 <div class="jolielabel">
                    <label for="name">NAME</label>
                 </div>
                 <div class="jolieinput">
-                      <input type="text" id="name" [(ngModel)]="user.nom" name="name" required>
+                      <input type="text"   name="nom" required>
                 </div>
             
             </div>
@@ -18,7 +19,7 @@
                    <label for="password">PASSWORD</label>
                 </div>
                 <div class="jolieinput">
-                     <input type="password" id="password" [(ngModel)]="user.password" name="password">
+                     <input type="password"  name="password">
                 </div>
             
             </div>
@@ -27,13 +28,12 @@
             </div>
             
     </form> 
-    <div id="text1">
-           If you don't yet have a competion, sign in , on inscription below<br>
-            <a routerLink="/inscription" style="color:blue">inscription</a></div>
-    </div>
-        
-    
 
-  
+    </div>
+</div>
+<style>
+    <?php include('connexion.css')?>   
+</style>    
+
 
 

@@ -1,6 +1,6 @@
 <?php 
 
-include __DIR__.'/inc/DatabaseConnect.php';
+include __DIR__.'/inc/db.php';
 
 
 

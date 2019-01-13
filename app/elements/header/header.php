@@ -9,7 +9,12 @@
 
    <div class="navbar">
        <ul class="nav-menu">
-        <li ><a href="" id="manage" *ngIf="connecter">Manage</a></li>
+       <?php if(!empty( $_SESSION['connecter'])){
+           echo '<li ><a href="" id="manage" >Manage</a></li>';
+       }
+        
+        ?>
+        
         <li ><a href="" id="match" class="active">Match</a></li>
         <li ><a href="" id="classement">Classement</a></li>
         <li class="dec"><a href="" id="admin">Admin</a></li>

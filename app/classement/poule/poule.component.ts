@@ -1,24 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CreateCompService } from 'src/app/competition/create-comp.service';
-import { Subject } from 'rxjs';
-import { isArray } from 'util';
-import { CompteService } from 'src/app/client/compte.service';
 
-@Component({
-  selector: 'app-poule',
-  templateUrl: './poule.component.html',
-  styleUrls: ['./poule.component.css']
-})
 export class PouleComponent implements OnInit {
-  poule1:Subject<any[]>=new Subject();
-  poule2:Subject<any[]>=new Subject();
-  poule3:Subject<any[]>=new Subject();
-  id;
-  constructor(
 
-    private comp:CreateCompService,
-    private compt : CompteService
-  ) { }
 
   ngOnInit() {
     this.comp.poule1.subscribe((e)=>{

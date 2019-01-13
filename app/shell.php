@@ -1,16 +1,21 @@
 
 
 <?php include("elements/header/header.php");?>
-<section>
+<section class="container">
   <div class="competition " hidden>
-    <?php include('competition/index.php');?>
+    <?php 
+      if(!empty( $_SESSION['connecter']))
+      include('competition/competition.php');
+      ?>
   </div>
   <div class="resultat pageN" >
     <?php include('resultat/index.php');?>
   </div>
 
-  <div class="classement" hidden>
+  <div class="classementA" hidden>
     <?php include('classement/index.php');?>
   </div>
+  <div class="admin" hidden>
+    <?php include('connexion/connexion.php');?>
+  </div>
 </section>
-<?php include("elements/footer/footer.php");?>

@@ -1,3 +1,8 @@
+<?php
+// On démarre la session AVANT d'écrire du code HTML
+session_start();
+
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -14,6 +19,8 @@
 </head>
 <body>
 <?php include('app/shell.php');?>
+<script type="text/javascript" src="/footapp2/assets/polyfills.js">
+</script>
 <script type="text/javascript" src="/footapp2/assets/jquery-3.3.1.min.js">
 </script>
 

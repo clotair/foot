@@ -42,6 +42,6 @@
          
 </div>
         
-<style type="text/javascript">
+<style type="text/css">
     <?php include('init.css');?>
 </style>

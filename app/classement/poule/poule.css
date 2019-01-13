@@ -6,13 +6,14 @@
     margin-top: 30px;
     padding: 15px;
     padding-bottom: 40px;
+    margin-bottom: 20px;
 }
-.grp{
+.classement .grp{
     display: block;
     margin-top: 50px;
 }
 
-.table
+.classement .table
 {
    
 	text-align:center;
@@ -21,22 +22,22 @@
     border-collapse: separate;
     border-spacing: 0;
 }
-.promu{
+.classement .promu{
     background-color: rgb(237, 239, 241);
 }
-td
+.classement td
 {
     border: 1px ;
 	text-align: center;    
 	
 }
-tr{
+.classement tr{
     height: 40px;
 }
-.points{
+.classement .points{
     font-weight: bold
 }
-td,th{
+.classement td,.classement th{
     border-bottom: 1px solid #DFE1E5;
     color: rgba(0,0,0,.87);
     font-size: 14px;
@@ -47,18 +48,18 @@ td,th{
     vertical-align: middle;
 }
 
-.eq{
+.classement .eq{
     width: 30%;
 }
-th{
+.classement th{
     font-weight: 500;
 
 }
 @media (max-width:425px){
-    .disp{
+    .classement .disp{
         display: none;
     }
-    .eq{
+    .classement .eq{
         width: 45%;
     }
 }

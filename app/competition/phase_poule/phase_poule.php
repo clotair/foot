@@ -1,5 +1,5 @@
 
-<section class="tout phase_poule" >
+<section class="tout phase_poule present" hidden>
 
     <a name="jour1"></a>
   <h1 >Premiere Journee</h1>
