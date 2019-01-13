@@ -27,17 +27,10 @@
                     <label for="Coach">Coach:</label>
                 </div>
                 <div class="jolieinput">
-                    <input type="text" id="Coach" [(ngModel)]="equipe.coach"  name="coach">
+                    <input type="text" id="Coach"   name="coach">
                 </div>
         </div>
-         <div class="formgroup">
-                <div class="jolielabel">
-                    <label for="drap">logo:</label>
-                </div>
-                <div class="jolieinput">
-                    <input type="file" id="Coach" name="drap" [(ngModel)]="equipe.coach"  name="coach">
-                </div>
-        </div>
+
 
 
   
