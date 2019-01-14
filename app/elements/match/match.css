@@ -55,6 +55,11 @@
 .resultat .content .mcp1 .vs{
     margin-top: 58px;
 }
+@media (min-width: 700px){
+    .resultat .content .mcp1 .score{
+        margin-top: 20%;
+    }
+}
 @media (max-width:480px){
     .resultat .content .mcp1 .score{
         margin-top: 28%;

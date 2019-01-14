@@ -1,5 +1,5 @@
 <?php 
-    require 'inc/db.php';
+    /*require 'inc/db.php';
     function query ( $pdo, $query, $parameters=[]) {  
     
         $query = $pdo->prepare($query);
@@ -7,7 +7,45 @@
         return $query;
         
     }
+    $sql=$pdo->prepare('SELECT `equipe1` FROM `matchs` WHERE `polue`=?');
+    $A=$sql->execute(['A']);
+    $equipe1 = $A->fetch();
+    $B=$sql->execute(['B']);
+    $equipe2 = $B->fetch();
+    $C=$sql->execute(['C']);
+    $equipe3 = $C->fetch();
+    $D=$sql->execute(['D']);
+    $equipe4 = $D->fetch();
+    $sql=$pdo->prepare('SELECT * FROM `matchs` WHERE `polue`=?');
+    $A=$sql->execute(['A']);
+    $matchA = $A->fetch();
+    $B=$sql->execute(['B']);
+    $matchB = $B->fetch();
+    $C=$sql->execute(['C']);
+    $matchC = $C->fetch();
+    $D=$sql->execute(['D']);
+    $matchD = $D->fetch();
+    foreach($matchA as $macth){
+        switch($match->equipe1){
+            case $equipe1[0]:
+                if($macth->but1<$match->but2){
+                    $equipe1[0]-
+                }else{
+                    if($macth->but1<$match->but2){
 
+                    }else{
+
+                    }
+                }
+            break;
+            case $equipe1[1]:
+            break;
+            case $equipe1[2]:
+            break;
+            case $equipe1[3]:
+            break;
+        }
+    }*/
 ?>
 <section class="classement"	>
     <h1>classement </h1>
