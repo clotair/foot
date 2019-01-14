@@ -13,9 +13,9 @@ function query ( $pdo, $query, $parameters=[]) {
 
 
    if ($method == 'GET') {
-   $sql = "SELECT * FROM match where jour=1 ORDER BY poule ");
+   $sql = "SELECT * FROM match where jour=1 ORDER BY poule ";
        query($pdo, $sql)
-  while ($resultat=$query->fetch()) {
+  while ($resultat==$query->fetch()) {
     echo json_encode($resultat);
   }
              else {
