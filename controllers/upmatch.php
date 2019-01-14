@@ -13,5 +13,4 @@
       }
      
   }
-  header('Location: ../index.php')
   ?>

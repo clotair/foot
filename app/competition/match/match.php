@@ -7,7 +7,7 @@
 echo '<div   class="formul mcp">
 
      
-          <form    method="GET" action="/footapp2/controllers/upmatch.php"  >
+          <form      >
           
           <div class="form">
               <div class="box1"><div class="nomequipe1">';

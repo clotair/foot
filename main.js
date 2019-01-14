@@ -53,7 +53,17 @@ function match_pm(i,j,p){
         url:'/footapp2/app/competition/match/match.php',
         data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
         success:(data)=>{
-           $(`#matchmj${j}${p}`).append(data)
+           $(`#matchmj${j}${p}`).append(data).find('form').on('submit',function(e){
+            e.preventDefault();
+            $.post({
+                url:'/footapp2/controllers/upmatch.php',
+                data:$(this).serialize(),
+                success:(data)=>{
+                    alert(data)
+                }
+            })
+        
+           })
         }
     })
 }
@@ -79,16 +89,8 @@ function get_match(niv){
 
 }
 function updatem(e){
-    $(this).parent('div').parent('div').find('form').trigger('submit')
-    console.log()
-    $.post({
-        url:'/footapp2/controllers/upmatch.php',
-        data:$(t).serialize()+'&equipe1='+equipe1+'&equipe2='+equipe2,
-        success:(data)=>{
-            alert(data)
-        }
-    })
-}
+    e.preventDefault();
+    }
 function get_matchm(niv){
     $.getJSON({
         
