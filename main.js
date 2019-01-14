@@ -59,6 +59,13 @@ function get_match(){
             alert(JSON.stringify(data))
         }
     })
+    $.post({
+        url:'/footapp2/app/elements/match/match.php',
+        data:"equipe1=fdfdfd&jouer=true&but1=1&but2=3&equipe2=fdfdf&photo1=gfg&photo2=fdfd",
+        success:(data)=>{
+            alert(data)
+        }
+    })
 
 }
 $(document).ready(function(){

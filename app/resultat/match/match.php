@@ -21,9 +21,9 @@
                     if($_POST['jouer'])
                     echo '<b>|</b>';
                     else
-                    echo $_POST['but1']
-        echo    '</div>'
-        '<div class="box2">
+                    echo $_POST['but1'];
+        echo    '</div>'.
+         '<div class="box2">
         <div class="nomequipe2"><h3>'.$_POST['equipe2'].'</h3></div>
         <div class="logo2">
             <img class="jolieimage" src="'.$_POST['photo2'].'"/>
