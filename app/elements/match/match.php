@@ -17,7 +17,7 @@
                     echo '</div>
                 </div>
                 <div class="score">';
-                    if($_POST['jouer'])
+                    if($_POST['jouer']=='false')
                     echo '<b>|</b>';
                     else
                     echo $_POST['but1'];
@@ -26,10 +26,10 @@
                 <div class="vs">VS</div>
                     '.
                 '<div class="score">';
-                    if($_POST['jouer'])
+                    if($_POST['jouer']=='false')
                     echo '<b>|</b>';
                     else
-                    echo $_POST['but1'];
+                    echo $_POST['but2'];
         echo    '</div>';
         echo '<div class="box2">
         <div class="nomequipe2"><h3>'.$_POST['equipe2'].'</h3></div>

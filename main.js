@@ -79,9 +79,11 @@ function get_match(niv){
 
 }
 function updatem(e){
+    $(this).parent('div').parent('div').find('form').trigger('submit')
+    console.log()
     $.post({
         url:'/footapp2/controllers/upmatch.php',
-        data:$(`#${equipe1}${equipe2}`).serialize()+'&equipe1='+equipe1+'&equipe2='+equipe2,
+        data:$(t).serialize()+'&equipe1='+equipe1+'&equipe2='+equipe2,
         success:(data)=>{
             alert(data)
         }
@@ -109,22 +111,14 @@ function get_matchm(niv){
 
 }
 $(document).ready(function(){
-    $.post({
-        url:'/footapp2/controllers/upmatch.php',
-        data:'but1=4&but2=3&equipe1='+'ghana'+'&equipe2='+'gabon',
-        success:(data)=>{
-            alert(data)
-        }
-    })
+    
     get_match(1)
     get_match(2)
     get_match(3)
     get_matchm(1)
     get_matchm(2)
     get_matchm(3)
-    $(".ttt").on('click',function(e){
-        alert($(this).parent().parent().content())
-    })
+   
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){

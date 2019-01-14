@@ -7,9 +7,13 @@
 echo '<div   class="formul mcp">
 
      
-          <form     class="form" >
+          <form    method="GET" action="/footapp2/controllers/upmatch.php"  >
+          
+          <div class="form">
               <div class="box1"><div class="nomequipe1">';
  echo $_POST['equipe1'];
+ echo '<input type="text" value="'.$_POST['equipe1'].'" name="equipe1" hidden/>';
+ echo '<input type="text" value="'.$_POST['equipe2'].'" name="equipe2" hidden/>';
  echo '</div>
               <div class="logo1">';
               $photo = query($pdo, 'SELECT `logo` FROM `equipe` WHERE nom=?',[$_POST['equipe1']])->fetch();
@@ -18,14 +22,14 @@ echo '<div   class="formul mcp">
 echo              '</div></div>
               <div>';
               
-    echo '<input type="number" class="scoreinput"  name="score1" placeholder="score" [value]="'.$_POST['but1'].'" min="0">';
+    echo '<input type="number" class="scoreinput"  name="but1" placeholder="score" value="'.$_POST['but1'].'" min="0">';
 
 
                   
 echo              '</div>
               <div class="vs">VS</div>
               <div>';
-    echo '<input type="number" class="scoreinput"  name="score1" placeholder="score" [value]="'.$_POST['but2'].'" min="0">';            
+    echo '<input type="number" class="scoreinput"  name="but2" placeholder="score" value="'.$_POST['but2'].'" min="0">';            
     
 echo '</div>';
               
@@ -34,14 +38,15 @@ echo $_POST['equipe2'].'</div><div class="logo2">';
 $photo = query($pdo, 'SELECT `logo` FROM `equipe` WHERE nom=?',[$_POST['equipe2']])->fetch();
         echo  '<img class="jolieimage"  src="/footapp2/logo/'.$photo[0].'.png" />';
 echo              '</div></div>
-             
-          </form>
-     
+             </div>
 
-          <div class="buttonCo">';
-    echo         '<button type="button" id="send" class="buttonCe ttt" value="Save" >Save</button>';
-    echo    '</div>    
-       
+             <div class="buttonCo">';
+             echo         '<button type="submit" class="buttonCe " value="Save" >Save</button>';
+             echo    '</div>';
+             echo '       </form>
+     
+    
+      
            
      
     
