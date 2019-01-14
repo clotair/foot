@@ -1,43 +1,40 @@
-<?php 
- if(!empty($_POST['equipe1'])){
-    echo '<div class="form">
-            <div class="box1">
-                <div class="nomequipe1"><h3>'.$_POST['equipe1'].'</h3></div>
-                    <div class="logo1">
-                        <img class="jolieimage" src="'.$_POST['photo1'].'"/>
+<?php echo 
+'<div *ngFor="let equip of result|async" class="matchi">
+
+
+                <div class="form">
+                    <a routerLink="/stat/equipe/{{equip?.equipe1?.id}}">
+                    <div class="box1">
+                        <div class="nomequipe1"><h3>{{equip?.equipe1?.nom}}</h3></div>
+                        <div class="logo1">
+                            <img class="jolieimage" src="/images/{{equip?.equipe1?.banniere}}"/>
                             
+                        </div>
                     </div>
+                    </a>
+                    <div class="score">
+                        {{(isjouer)?equip?.but1:''}}
+                        <b *ngIf="!isjouer">|</b>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="score">
+                        {{(isjouer)?equip?.but2:''}}
+                        <b *ngIf="!isjouer">|</b>
+                    </div>
+                    <a routerLink="/stat/equipe/{{equip?.equipe2?.id}}">
+                        <div class="box2">
+                            <div class="nomequipe2"><h3>{{equip?.equipe2?.nom}}</h3></div>
+                            <div class="logo2">
+                                <img class="jolieimage" src="/images/{{equip?.equipe2?.banniere}}"/>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="score">';
-                    if($_POST['jouer'])
-                    echo '<b>|</b>';
-                    else
-                    echo $_POST['but1'];
-                    echo '
-                </div>
-                <div class="vs">VS</div>
-                    '.
-                '<div class="score">';
-                    if($_POST['jouer'])
-                    echo '<b>|</b>';
-                    else
-                    echo $_POST['but1'];
-        echo    '</div>'.
-         '<div class="box2">
-        <div class="nomequipe2"><h3>'.$_POST['equipe2'].'</h3></div>
-        <div class="logo2">
-            <img class="jolieimage" src="'.$_POST['photo2'].'"/>
-        </div>
-    </div>
-
-</div>';
-
-}
 
 
+         
 
-?>
-
-<style type="text/css">
-        <?php include('match.css');?>
-</style>
+</div>'
+echo '<style type="text/css">';
+echo         include('match.css');
+echo '</style>'?>
