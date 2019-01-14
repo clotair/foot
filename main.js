@@ -52,21 +52,23 @@ var gestion_err_reseau =(fonction,...argument)=>{
 function save_token(name,value){
     document.cookie = `${name}=${value};path=/`;
 }
+function match_p(i,j,p){
+    $.post({
+        url:'/footapp2/app/elements/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+           $(`#matchj${j}${p}`).append(data)
+        }
+    })
+}
 function get_match(){
     $.get({
         url:'/footapp2/controllers/match.php?id=1',
         success:(data)=>{
-            let j =0 ;
-            for( let i of data){
-                j++;gp='a'
-                $.post({
-                    url:'/footapp2/app/elements/match/match.php',
-                    data:`equipe1=${i.equipe1}&jouer=false&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=gfg&photo2=fdfd`,
-                    success:(data)=>{
-                       $(`#matchj1a`).append(data)
-                    }
-                })
-            }
+          
+            match_p(data[0],1,'a')
+            match_p(data[1],1,'a')
+            match_p(data[2],2,'b')
         }
     })
     
