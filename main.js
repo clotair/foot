@@ -70,7 +70,7 @@ function get_match(niv){
             match_p(data[0],niv,'a')
             match_p(data[1],niv,'a')
             match_p(data[2],niv,'b')
-            match_p(data[1],niv,'b')
+            match_p(data[3],niv,'b')
             match_p(data[4],niv,'c')
             match_p(data[5],niv,'c')
             match_p(data[6],niv,'d')
@@ -84,7 +84,7 @@ $(document).ready(function(){
     get_match(1)
     get_match(2)
     get_match(3)
-    get_match(4)
+    
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){

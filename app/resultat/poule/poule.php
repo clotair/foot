@@ -44,7 +44,7 @@
         <h2>GROUPE A</h2>
         
       </div>
-      <div class="groupmatch" id="matchj3ab">
+      <div class="groupmatch" id="matchj3b">
           <h2>GROUPE B</h2>
         <app-match *ngFor="let match of gp2_j3|async" [idmacht]="match"></app-match>
       </div>
