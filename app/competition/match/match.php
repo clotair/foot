@@ -24,7 +24,9 @@ echo              '</div></div>
 echo              '</div>
               <div class="vs">VS</div>
               <div>'
-    echo '<input type="number" class="scoreinput"  name="score1" placeholder="score" [value]="'.$_POST['but2'].'" min="0">';             </div>
+    echo '<input type="number" class="scoreinput"  name="score1" placeholder="score" [value]="'.$_POST['but2'].'" min="0">';            
+    
+echo '</div>';
               
 echo              '<div class="box2"><div class="nomequipe2">';
 echo $_POST['equipe2'].'</div><div class="logo2">'
