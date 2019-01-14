@@ -8,6 +8,7 @@ $method = $_SERVER['REQUEST_METHOD'];
         return $query;
         
     }
+<<<<<<< HEAD
  if ($method == 'GET') {
      resultat1=[];
      resultat2=[];
@@ -28,6 +29,9 @@ $method = $_SERVER['REQUEST_METHOD'];
        echo json_response("false",400);
     }
              
+=======
+
+>>>>>>> 99e1d0573b1ae5f4211778eb3996fa00e8579b29
 ?>
 <section class="classement"	>
     <h1>classement </h1>

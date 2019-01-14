@@ -1,4 +1,5 @@
-let classement = []
+let classement = [];
+let tab=[];
 function createThumbnail(file) {
     
     var reader = new FileReader();
@@ -39,12 +40,27 @@ var gestion_err_reseau =(fonction,...argument)=>{
 function save_token(name,value){
     document.cookie = `${name}=${value};path=/`;
 }
+function sup(){
+    for(let i of tab){
+        $(i).css({
+            display:'none'
+        })
+    }
+    tab = []
+}
+function get(){
+    get_match(1)
+    get_match(2)
+    get_match(3)    
+}
 function match_p(i,j,p){
     $.post({
         url:'/footapp2/app/elements/match/match.php',
         data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
         success:(data)=>{
-           $(`#matchj${j}${p}`).append(data)
+            let t = $(data)
+            tab.push(t)
+           $(`#matchj${j}${p}`).append(t)
         }
     })
 }
@@ -53,17 +69,20 @@ function match_pm(i,j,p){
         url:'/footapp2/app/competition/match/match.php',
         data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
         success:(data)=>{
-           $(`#matchmj${j}${p}`).append(data).find('form').on('submit',function(e){
+           let t = $(data)
+           $(t).find('form').on('submit',function(e){
             e.preventDefault();
             $.post({
                 url:'/footapp2/controllers/upmatch.php',
                 data:$(this).serialize(),
                 success:(data)=>{
-                    alert(data)
+                    sup();
+                    get()
                 }
             })
         
            })
+            $(`#matchmj${j}${p}`).append(t)
         }
     })
 }
@@ -88,6 +107,7 @@ function get_match(niv){
     
 
 }
+
 function updatem(e){
     e.preventDefault();
     }
