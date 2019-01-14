@@ -1,3 +1,4 @@
+let classement = []
 function createThumbnail(file) {
     
     var reader = new FileReader();
@@ -29,21 +30,7 @@ window.addEventListener("online",(e)=>{
 window.addEventListener("offline",(e)=>{
     offline = true;
 },false);
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
+
 var gestion_err_reseau =(fonction,...argument)=>{
     if(!({fonction:fonction,argument:argument} in pile))
         pile.push({fonction:fonction,argument:argument})
@@ -84,10 +71,21 @@ function get_match(niv){
             match_p(data[5],niv,'c')
             match_p(data[6],niv,'d')
             match_p(data[7],niv,'d')
+        },error:(err)=>{
+            gestion_err_reseau(get_match,niv)
         }
     })
     
 
+}
+function updatem(equipe1,equipe2){
+    $.post({
+        url:'/footapp2/controllers/upmatch.php',
+        data:$(`#${equipe1}${equipe2}`).serialize()+'&equipe1='+equipe1+'&equipe2='+equipe2,
+        success:(data)=>{
+            alert(data)
+        }
+    })
 }
 function get_matchm(niv){
     $.getJSON({
@@ -103,6 +101,8 @@ function get_matchm(niv){
             match_pm(data[5],niv,'c')
             match_pm(data[6],niv,'d')
             match_pm(data[7],niv,'d')
+        },error:(err)=>{
+            gestion_err_reseau(get_matchm,niv)
         }
     })
     

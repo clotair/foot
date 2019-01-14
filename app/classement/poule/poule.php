@@ -1,4 +1,13 @@
-
+<?php 
+    require 'inc/db.php';
+    function query ( $pdo, $query, $parameters=[]) {  
+    
+        $query = $pdo->prepare($query);
+        $query->execute($parameters);
+        return $query;
+        
+    }
+?>
 <section class="classement"	>
     <h1>classement </h1>
     <div *ngFor="let poule of poule1|async" class="grp">

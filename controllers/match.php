@@ -3,13 +3,7 @@
   require '../inc/db.php';
   $method = $_SERVER['REQUEST_METHOD'];
  $jour='';
-function query ( $pdo, $query, $parameters=[]) {  
-    
-    $query = $pdo->prepare($query);
-    $query->execute($parameters);
-    return $query;
-    
-}
+
 
 
 

@@ -28,4 +28,11 @@
     function go_to_manage(){
         echo "<script src='footapp2/controllers/navigation.php?manage=true'></script>";
     }
+    function query ( $pdo, $query, $parameters=[]) {  
+    
+        $query = $pdo->prepare($query);
+        $query->execute($parameters);
+        return $query;
+        
+    }
 ?>
