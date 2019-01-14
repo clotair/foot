@@ -39,7 +39,7 @@ echo              '</div></div>
      
 
           <div class="buttonCo">';
-    echo         '<button type="submit" id="send" class="buttonCe" value="Save" (click)="save()">Save</button>';
+    echo         '<button type="button" id="send" class="buttonCe ttt" value="Save" >Save</button>';
     echo    '</div>    
        
            
