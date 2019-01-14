@@ -21,7 +21,7 @@ function query ( $pdo, $query, $parameters=[]) {
     echo json_encode($resultat);
   
    }       else {
-       echo json_response("false");
+       echo json_response("false",400);
     }
         
     
