@@ -11,6 +11,9 @@ function createThumbnail(file) {
     reader.readAsDataURL(file);
    
 }
+function mat_div(match){
+
+}
 var offline = false;
 var pile = [];
 window.addEventListener("online",(e)=>{
@@ -51,7 +54,7 @@ function save_token(name,value){
 }
 function get_match(){
     $.get({
-        url:'/footapp2/controllers/match.php',
+        url:'/footapp2/controllers/match.php?id=1',
         success:(data)=>{
             alert(JSON.stringify(data))
         }
@@ -181,7 +184,7 @@ $(document).ready(function(){
                             success:(data)=>{
                                     if(data['status']){
                                         if(data['message']){
-                                            window.location.pathname='footapp2'
+                                            window.location.pathname='footapp2/index.php?page=manage'
                                         }
                                     }
                             },
