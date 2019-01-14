@@ -7,6 +7,7 @@
         return $query;
         
     }
+
 ?>
 <section class="classement"	>
     <h1>classement </h1>
