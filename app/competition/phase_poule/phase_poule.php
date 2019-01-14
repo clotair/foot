@@ -5,63 +5,63 @@
   <h1 >Premiere Journee</h1>
 
 
-  <div >
+  <div id="matchmj1a">
     <h3>GROUPE A</h3>
-    <app-match *ngFor="let match of gp1_j1|async" [idmacht]="match"></app-match>
+    
   </div>
   
-  <div >
+  <div id="matchmj1b">
       <h3>GROUPE B</h3>
-    <app-match *ngFor="let match of gp2_j1|async" [idmacht]="match"></app-match>
+    
   </div>
-  <div>
+  <div id="matchmj1c">
       <h3>GROUPE C</h3>
-    <app-match *ngFor="let match of gp3_j1|async" [idmacht]="match"></app-match>
+    
   </div>
   <a name="jour2"></a>
-  <div >
+  <div id="matchmj1d">
       <h3>GROUPE D</h3>
-    <app-match *ngFor="let match of gp4_j1|async" [idmacht]="match"></app-match>
+    
   </div>
   <a name="jour2"></a>
   <h1 >Deuxieme Journee</h1>
 
-  <div>
+  <div id="matchmj2a">
       <h3>GROUPE A</h3>
-      <app-match *ngFor="let match of gp1_j2|async" [idmacht]="match"></app-match>
+     
     </div>
-    <div>
+    <div id="matchmj2b">
         <h3>GROUPE B</h3>
-      <app-match *ngFor="let match of gp2_j2|async" [idmacht]="match"></app-match>
+
     </div>
-    <div>
+    <div id="matchmj2c">
         <h3>GROUPE C</h3>
-      <app-match *ngFor="let match of gp3_j2|async" [idmacht]="match"></app-match>
+     
     </div>
    
-    <div >
+    <div id="matchmj2d">
         <h3>GROUPE D</h3>
-      <app-match *ngFor="let match of gp4_j2|async" [idmacht]="match"></app-match>
+     
       
     </div>
     <a name="jour3"></a>
   <h1 >Troisieme Journee</h1>
 
-  <div >
+  <div id="matchmj3a">
       <h3>GROUPE A</h3>
-      <app-match *ngFor="let match of gp1_j3|async" [idmacht]="match"></app-match>
+     
     </div>
-    <div >
+    <div id="matchmj3b">
         <h3>GROUPE B</h3>
-      <app-match *ngFor="let match of gp2_j3|async" [idmacht]="match"></app-match>
+      
     </div>
-    <div>
+    <div id="matchmj3c">
         <h3>GROUPE C</h3>
-      <app-match *ngFor="let match of gp3_j3|async" [idmacht]="match"></app-match>
+     
     </div>
-    <div >
+    <div id="matchmj3d">
         <h3>GROUPE D</h3>
-      <app-match *ngFor="let match of gp4_j3|async" [idmacht]="match"></app-match>
+     
     </div>
     <div class="buttonCo">
         <button (click)="quart()" class="buttonCe prinb">GO TO QUART</button>

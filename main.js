@@ -61,6 +61,15 @@ function match_p(i,j,p){
         }
     })
 }
+function match_pm(i,j,p){
+    $.post({
+        url:'/footapp2/app/competition/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+           $(`#matchmj${j}${p}`).append(data)
+        }
+    })
+}
 function get_match(niv){
     $.getJSON({
         
@@ -80,10 +89,32 @@ function get_match(niv){
     
 
 }
+function get_matchm(niv){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=${niv}`,
+        success:(data)=>{
+           console.log(data[0])
+            match_pm(data[0],niv,'a')
+            match_pm(data[1],niv,'a')
+            match_pm(data[2],niv,'b')
+            match_pm(data[3],niv,'b')
+            match_pm(data[4],niv,'c')
+            match_pm(data[5],niv,'c')
+            match_pm(data[6],niv,'d')
+            match_pm(data[7],niv,'d')
+        }
+    })
+    
+
+}
 $(document).ready(function(){
     get_match(1)
     get_match(2)
     get_match(3)
+    get_matchm(1)
+    get_matchm(2)
+    get_matchm(3)
     
     $('#manage').click(function(e){
         e.preventDefault();

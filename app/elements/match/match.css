@@ -1,46 +1,46 @@
 
-.form{
+.resultat .content  .mcp1.form{
     -webkit-display:flex;
      display: flex;
      margin-top: 5px;
      width: 100%;
      height: 140px;
 }
-.box1{
+.resultat .content .mcp1 .box1{
     display: inline-block;
     width: 90%;
 }
-.box2{
+.resultat .content .mcp1 .box2{
     display: inline-block;
     width: 90%;
     margin-left: 5px;
 }
-.nomequipe1{
+.resultat .content .mcp1 .nomequipe1{
     height: 30px;
    
 }
-.logo1{
+.resultat .content .mcp1 .logo1{
     background-color: #fff;
     border-radius: 4px;
 }
-.jolieimage{
+.resultat .content .mcp1 .jolieimage{
     height: 100px;
 }
-.nomequipe2{
+.resultat .content .mcp1 .nomequipe2{
     height: 30px;
  
 }
-.logo2{
+.resultat .content .mcp1 .logo2{
     background-color: #fff;
     border-radius: 4px;
 }
 
-a{
+.resultat .content .mcp1 a{
     color: initial;
 }
 
 
-.score{
+.resultat .content .mcp1 .score{
     display: inline-block;
     border: none;
     width: 10%;
@@ -49,14 +49,14 @@ a{
     text-align: center;
 
 }
-h3{
+.resultat .content .mcp1 h3{
     font-size: 0.8em;
 }
-.vs{
+.resultat .content .mcp1 .vs{
     margin-top: 58px;
 }
 @media (max-width:480px){
-    .score{
+    .resultat .content .mcp1 .score{
         margin-top: 28%;
     }
 }
