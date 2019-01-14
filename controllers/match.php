@@ -2,6 +2,7 @@
   require 'fontions.php';
   require '../inc/db.php';
   $method = $_SERVER['REQUEST_METHOD'];
+ $jour='';
 function query ( $pdo, $query, $parameters=[]) {  
     
     $query = $pdo->prepare($query);
@@ -13,11 +14,12 @@ function query ( $pdo, $query, $parameters=[]) {
 
 
    if ($method == 'GET') {
-   $sql = "SELECT * FROM matchs WHERE jour=1 ORDER BY poule ";
+       $jour=$_GET['id'];
+   $sql = "SELECT `equipe1` , `equipe2` FROM matchs ".($jour?"WHERE  jour=$jour ORDER BY poule ":''); 
        $query=query($pdo, $sql);
-  while ($resultat=$query->fetch()) {
+  $resultat=$query->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($resultat);
-  }
+  
    }       else {
        echo json_response("false",400);
     }
