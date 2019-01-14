@@ -61,21 +61,30 @@ function match_p(i,j,p){
         }
     })
 }
-function get_match(){
-    $.get({
-        url:'/footapp2/controllers/match.php?id=1',
+function get_match(niv){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=${niv}`,
         success:(data)=>{
-          
-            match_p(data[0],1,'a')
-            match_p(data[1],1,'a')
-            match_p(data[2],2,'b')
+           console.log(data[0])
+            match_p(data[0],niv,'a')
+            match_p(data[1],niv,'a')
+            match_p(data[2],niv,'b')
+            match_p(data[1],niv,'b')
+            match_p(data[4],niv,'c')
+            match_p(data[5],niv,'c')
+            match_p(data[6],niv,'d')
+            match_p(data[7],niv,'d')
         }
     })
     
 
 }
 $(document).ready(function(){
-    get_match()
+    get_match(1)
+    get_match(2)
+    get_match(3)
+    get_match(4)
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){
