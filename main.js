@@ -56,16 +56,20 @@ function get_match(){
     $.get({
         url:'/footapp2/controllers/match.php?id=1',
         success:(data)=>{
-            alert(JSON.stringify(data))
+            let j =0 ;
+            for( let i of data){
+                j++;gp='a'
+                $.post({
+                    url:'/footapp2/app/elements/match/match.php',
+                    data:`equipe1=${i.equipe1}&jouer=false&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=gfg&photo2=fdfd`,
+                    success:(data)=>{
+                       $(`#matchj1a`).append(data)
+                    }
+                })
+            }
         }
     })
-    $.post({
-        url:'/footapp2/app/elements/match/match.php',
-        data:"equipe1=fdfdfd&jouer=true&but1=1&but2=3&equipe2=fdfdf&photo1=gfg&photo2=fdfd",
-        success:(data)=>{
-            alert(data)
-        }
-    })
+    
 
 }
 $(document).ready(function(){
