@@ -1,9 +1,6 @@
 <section class="tout demi" hidden>
   <h1>Demi finale</h1>
-  <article *ngFor="let match of matchs|async" class="groupmatch">
-    <h2>{{(match.nom == 'MATCH 5')? 'MATCH 1': 'MATCH 2'}}</h2>
-    <app-match  [idmacht]="match.matchs[0]"></app-match>
-  </article>
+  
   
 </section>
 <style type="text/css">

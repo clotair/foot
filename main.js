@@ -67,7 +67,21 @@ function get_quart(){
             match_q(data[2])
 
         },error:(err)=>{
-            gestion_err_reseau(get_match,niv)
+            gestion_err_reseau(get_quart)
+        }
+    })    
+}
+function get_demi(){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=5`,
+        success:(data)=>{
+           
+            match_d(data[0])
+            match_d(data[1])
+
+        },error:(err)=>{
+            gestion_err_reseau(get_demi)
         }
     })    
 }
@@ -81,6 +95,19 @@ function match_q(i){
             let ar = $('<article/>').addClass('groupmatch').append(t)
             tab.push(ar)
            $('.tout.quart').append(ar)
+        }
+    })
+}
+function match_d(i){
+    $.post({
+        url:'/footapp2/app/elements/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+            let t = $(data)
+            
+            let ar = $('<article/>').addClass('groupmatch').append(t)
+            tab.push(ar)
+           $('.tout.demi').append(ar)
         }
     })
 }
@@ -136,6 +163,28 @@ function match_qm(i){
         
            })
             $('.quart.m article').append(t)
+        }
+    })
+}
+function match_qm(i){
+    $.post({
+        url:'/footapp2/app/competition/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+           let t = $(data)
+           $(t).find('form').on('submit',function(e){
+            e.preventDefault();
+            $.post({
+                url:'/footapp2/controllers/upmatch.php',
+                data:$(this).serialize(),
+                success:(data)=>{
+                    sup();
+                    get();
+                }
+            })
+        
+           })
+            $('.demi.m article').append(t)
         }
     })
 }
@@ -196,6 +245,23 @@ function get_matchqm(){
     
 
 }
+function get_matchdm(){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=5`,
+        success:(data)=>{
+          
+            match_dm(data[0])
+            match_dm(data[1])
+        
+            
+        },error:(err)=>{
+            gestion_err_reseau(get_matchdm)
+        }
+    })
+    
+
+}
 function get_matchm(niv){
     $.getJSON({
         
@@ -218,10 +284,20 @@ function get_matchm(niv){
 
 }
 function quart(){
-    $.get({
+    $.post({
         url:'footapp2/controllers/quart.php',
+        data:'',
         success:(data)=>{
             alert('dsd')
+        }
+    })
+}
+function demi(){
+    $.post({
+        url:'footapp2/controllers/demi.php',
+        data:'',
+        success:(data)=>{
+            alert('demi init')
         }
     })
 }
@@ -234,6 +310,7 @@ $(document).ready(function(){
     get_matchm(2);
     get_matchm(3);
     get_quart();
+    get_demi();
     get_matchqm();
     $('#manage').click(function(e){
         e.preventDefault();
