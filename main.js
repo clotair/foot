@@ -166,7 +166,7 @@ function match_qm(i){
         }
     })
 }
-function match_qm(i){
+function match_dm(i){
     $.post({
         url:'/footapp2/app/competition/match/match.php',
         data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
@@ -288,7 +288,7 @@ function quart(){
         url:'footapp2/controllers/quart.php',
         data:'',
         success:(data)=>{
-            alert('dsd')
+            alert('quart init')
         }
     })
 }
