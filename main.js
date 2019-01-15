@@ -53,7 +53,8 @@ function get(){
     get_match(2);
     get_match(3);
     get_classement();
-    get_quart();    
+    get_quart(); 
+    get_demi();    
 }
 function get_quart(){
     $.getJSON({
@@ -312,6 +313,7 @@ $(document).ready(function(){
     get_quart();
     get_demi();
     get_matchqm();
+    get_matchdm();
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){
