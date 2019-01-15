@@ -64,7 +64,7 @@
      
     </div>
     <div class="buttonCo">
-        <button (click)="quart()" class="buttonCe prinb">GO TO QUART</button>
+        <button onclick="quart()" class="buttonCe prinb">GO TO QUART</button>
     </div>
     
 </section>

@@ -1,8 +1,5 @@
 <section class="tout quart" hidden>
   <h1>Quart de finale</h1>
-  <article *ngFor="let match of matchs|async" class="groupmatch">
-    <h2>{{match.nom}}</h2>
-    <app-match  [idmacht]="match.matchs[0]"></app-match>
-  </article>
+
   
 </section>

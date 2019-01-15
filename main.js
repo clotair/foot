@@ -49,9 +49,40 @@ function sup(){
     tab = []
 }
 function get(){
-    get_match(1)
-    get_match(2)
-    get_match(3)    
+    get_match(1);
+    get_match(2);
+    get_match(3);
+    get_classement();
+    get_quart();    
+}
+function get_quart(){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=4`,
+        success:(data)=>{
+           
+            match_q(data[0])
+            match_q(data[1])
+            match_q(data[2])
+            match_q(data[2])
+
+        },error:(err)=>{
+            gestion_err_reseau(get_match,niv)
+        }
+    })    
+}
+function match_q(i){
+    $.post({
+        url:'/footapp2/app/elements/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+            let t = $(data)
+            
+            let ar = $('<article/>').addClass('groupmatch').append(t)
+            tab.push(ar)
+           $('.tout.quart').append(ar)
+        }
+    })
 }
 function match_p(i,j,p){
     $.post({
@@ -86,12 +117,34 @@ function match_pm(i,j,p){
         }
     })
 }
+function match_qm(i){
+    $.post({
+        url:'/footapp2/app/competition/match/match.php',
+        data:`equipe1=${i.equipe1}&jouer=${i.status==1}&but1=${i.but1}&but2=${i.but2}&equipe2=${i.equipe2}&photo1=${i.photo1}&photo2=${i.photo2}`,
+        success:(data)=>{
+           let t = $(data)
+           $(t).find('form').on('submit',function(e){
+            e.preventDefault();
+            $.post({
+                url:'/footapp2/controllers/upmatch.php',
+                data:$(this).serialize(),
+                success:(data)=>{
+                    sup();
+                    get();
+                }
+            })
+        
+           })
+            $('.quart.m article').append(t)
+        }
+    })
+}
 function get_match(niv){
     $.getJSON({
         
         url:`/footapp2/controllers/match.php?id=${niv}`,
         success:(data)=>{
-           console.log(data[0])
+           
             match_p(data[0],niv,'a')
             match_p(data[1],niv,'a')
             match_p(data[2],niv,'b')
@@ -111,6 +164,38 @@ function get_match(niv){
 function updatem(e){
     e.preventDefault();
     }
+function get_classement(){
+    $.post({
+        url:'/footapp2/app/classement/poule/poule.php',
+        data:'',
+        success:(data)=>{
+            let t = $(data);
+            tab.push(t);
+            $('.classement .topajuste').html(t);
+        },
+        error:(err)=>{
+            gestion_err_reseau(get_classement)
+        }
+    })
+}
+function get_matchqm(){
+    $.getJSON({
+        
+        url:`/footapp2/controllers/match.php?id=4`,
+        success:(data)=>{
+          
+            match_qm(data[0])
+            match_qm(data[1])
+            match_qm(data[2])
+            match_qm(data[3])
+            
+        },error:(err)=>{
+            gestion_err_reseau(get_matchqm,niv)
+        }
+    })
+    
+
+}
 function get_matchm(niv){
     $.getJSON({
         
@@ -132,15 +217,24 @@ function get_matchm(niv){
     
 
 }
+function quart(){
+    $.get({
+        url:'footapp2/controllers/quart.php',
+        success:(data)=>{
+            alert('dsd')
+        }
+    })
+}
 $(document).ready(function(){
-    
-    get_match(1)
-    get_match(2)
-    get_match(3)
-    get_matchm(1)
-    get_matchm(2)
-    get_matchm(3)
-   
+    $(document).outerHeight(200);
+    get_match(1);
+    get_match(2);
+    get_match(3);
+    get_matchm(1);
+    get_matchm(2);
+    get_matchm(3);
+    get_quart();
+    get_matchqm();
     $('#manage').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('active')){
@@ -247,10 +341,12 @@ $(document).ready(function(){
         $.post({
             url:'/footapp2/controllers/connexion.php',
             data:$(this).serialize(),
+            dataType:'json',
             success:(data)=>{
+                    
                     if(data['status']){
                         if(data['message']){
-                            window.location.pathname='footapp2/'
+                            window.location.pathname='/footapp2/'
                         }
                     }
             },
@@ -260,13 +356,15 @@ $(document).ready(function(){
                             url:'/footapp2/controllers/connexion.php',
                             data:$(this).serialize(),
                             success:(data)=>{
+                                window.location.pathname='/footapp2/index.php?page=manage'
                                     if(data['status']){
                                         if(data['message']){
-                                            window.location.pathname='footapp2/index.php?page=manage'
+                                            
                                         }
                                     }
                             },
                             error:(err)=>{
+                                
                                     gestion_err_reseau(()=>{})
                             }
                         })

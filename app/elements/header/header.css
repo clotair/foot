@@ -8,7 +8,7 @@
     box-shadow: 0px 8px 14px -3px grey;
     z-index: 2002;
     height: 480px;
-    transition: 0.5s background-image height;
+    transition: height 0.1s;
     transition-property: opacity background-color;
 }
 #apphead .overley{

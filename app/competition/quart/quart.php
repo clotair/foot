@@ -1,11 +1,11 @@
-<section class="quart" hidden>
+<section class="quart m" hidden>
     <h1>Quart de finale</h1>
-    <article *ngFor="let match of matchs|async">
-      <h2>{{match.nom}}</h2>
-      <app-match  [idmacht]="match.matchs[0]"></app-match>
+    <article >
+      
+     
     </article>
     <div class="buttonCo">
-        <button (click)="demi()" class="buttonCe prinb">init demi</button>
+        <button onclick="demi()" class="buttonCe prinb">init demi</button>
     </div>
     
 </section>

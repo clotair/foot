@@ -16,15 +16,15 @@
         
     }
     
-    $A=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` ASC',['A']);
+    $A=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` DESC',['A']);
     $equipe1 = $A->fetchAll();
     
    
-    $B=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` ASC',['B']);
+    $B=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` DESC',['B']);
     $equipe2 = $B->fetchAll();
-    $C=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` ASC',['C']);
+    $C=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` DESC',['C']);
     $equipe3 = $C->fetchAll();
-    $D=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` ASC',['D']);
+    $D=query($pdo,'SELECT * FROM `classements` WHERE `groupe`=? ORDER BY `points` DESC',['D']);
     $equipe4 = $D->fetchAll();
 
     $poules = array(
