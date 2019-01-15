@@ -26,7 +26,7 @@
         'A' => $equipe1,
         'B' => $equipe2,
         'C' => $equipe3,
-        'E' => $equipe4
+        'D' => $equipe4
     )
     
 ?>
@@ -40,6 +40,7 @@
             <thead>
                 <tr>
                     <th></th> 
+                    <th></th>
                     <th class="eq">Equipe</th>
                     <th>MJ</th>
                     <th class="disp">MG</th>
@@ -56,11 +57,11 @@
                 <tr>
                     <td><?php echo ++$i;?></td> 
                     <td>
-                    <span>
+                   
                     <?php $photo = query($pdo, 'SELECT `logo` FROM `equipe` WHERE nom=?',[$equipe['nom']])->fetch(); 
                      echo '<img  src="/footapp2/logo/'.$photo[0].'.png"/>'?>
-                    </span>
-                        <span><?php echo $equipe['nom'];?></span></td>
+                    </td>
+                        <td><?php echo $equipe['nom'];?></td>
                     <td ><?php echo $equipe['jouer'];?></td>
                     <td class="disp"><?php echo $equipe['gagner'];?></td>
                     <td class="disp"><?php echo $equipe['perdu'];?></td>

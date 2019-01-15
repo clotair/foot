@@ -55,6 +55,20 @@
     font-weight: 500;
 
 }
+.classement .table img{
+    
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    
+}
+.classement .table tr span{
+    display: inline-block;
+
+}
+.classement .table tr .spanim{
+    width: 30%;
+}
 @media (max-width:425px){
     .classement .disp{
         display: none;
