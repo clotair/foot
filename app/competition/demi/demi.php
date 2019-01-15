@@ -1,4 +1,4 @@
-<section class="demi m" hidden>
+<section class="demi m" >
     <h1>Demi finale</h1>
     <article >
       
