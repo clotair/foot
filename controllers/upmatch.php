@@ -8,7 +8,9 @@
          $query=$pdo->prepare($sql);
          $query->execute([$_POST['but1'], $_POST['but2'],1,$_POST['equipe1'],$_POST['equipe2']]);
          echo 'true';
-      }else{
+         up_classement($pdo,$_POST['equipe1']);
+         up_classement($pdo,$_POST['equipe2']);
+                }else{
         echo 'false';
       }
      

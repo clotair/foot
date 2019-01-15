@@ -1,6 +1,11 @@
 <?php 
-    
-        require_once 'inc/db.php'; 
+    $method = $_SERVER['REQUEST_METHOD'];
+    if($method == 'POST'){
+        require_once '../../../inc/db.php';
+    }else{
+        require_once 'inc/db.php';
+    }
+         
      
    
     function query ( $pdo, $query, $parameters=[]) {  
